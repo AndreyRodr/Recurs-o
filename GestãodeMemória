@@ -1,0 +1,12 @@
+# Uso da RAM para um sistema
+
+- Espaço Estático
+  - Contém o código do programa
+- Heap
+  - Para alocação dinâmica de memória
+- Pilha
+  - Para execução de funções
+
+  # Execução de uma função
+  - Toda vez que uma função é invocada, suas variáveis locais são armazenadas no topo da pilha
+  - Quando uma função termina a sua execução, suas variáveis locais são removidas da pilha
