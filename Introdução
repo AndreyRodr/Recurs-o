@@ -1,0 +1,58 @@
+# Solução por indução/recursão
+
+
+# 1. Defina a solução para casos base
+# 2. Defina a solução para um caso geral
+
+  - Utilize soluções para instâncias (entradas) menores do problema
+
+# Indução
+
+#  Definição
+
+  - É uma técnica de demonstração matemática em que algum parâmetro da proposição a ser demonstrada envolve números naturais
+
+# Premissa
+
+  - Seja T uma proposição que desejamos provar como verdadeira para todos valores naturais n.
+
+# Indução
+
+# Estrutura
+
+  - Ao invés de provar diretamente que T é válida para todos os valores de n, basta provar os itens 1 e 3, listados a seguir
+        - Caso Base: Provar que T é valida para n = 1
+        - Hipótese de Indução: Assumir que T é valida para n - 1
+        - Passo de Indução: Provar que T é valida para n
+# Exemplo
+
+  - Teorema: A soma S(n) dos primeiros n números naturais é S(n) = n(n+1)/2
+
+    - Caso Base: para n = 1, temos que S(1) = n(n+1)/2 = 1(1+1)/2 = 1
+    - Hipótese de Indução: para n - 1, ou seja, S(n - 1) = (n-1)n/2 CONSIDERAR VÁLIDO
+    - Passo de Indução: mostrar que é válida para n
+
+# Exemplo: Fatorial
+
+  - Problema: Calcular o fatorial de um número inteiro não negativo(N)
+  - Caso base: 0! = 1
+  - Passo indutivo: n! = n x (n-1)
+    - Este problema é trivial pois a própria definição de fatorial é recursiva
+
+# Recursão opera como Indução
+  - Solução do Fatorial
+    - Se n = 0 então 0! = 1
+    - Se n >= 1 então n! = n x (n - 1)! 
+
+  - Aplicação da Indução
+    - Sabemos a solução para um caso base (n = 0)
+    - Definimos a solução do problema geral em termos do mesmo problema, mas para um caso mais simples
+
+# Fatorial recursivo
+
+def fatorial(n):
+  if n == 0:
+    return 1
+  else:
+    aux = fatorial(n-1)
+  return n*aux
